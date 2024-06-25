@@ -48,8 +48,13 @@ src/
 3. **Page components (`app/dashboard/page.tsx`)**
     - Handle data fetching for dashboard items.
 
-4. **Presentational Component (`app/dashboard/components/FlightsTable.tsx, WeaterWidget.tsx etc.`)**
+4. **Presentational Component (`app/dashboard/components/FlightsTable.tsx, WeatherWidget.tsx etc.`)**
     - Receives data as props and handles the display logic.     
+
+
+### Data Fetching 🎣
+
+The data is retrieved from a route handler, such as /api/flights/route.ts, and is then passed as props from the parent component /dashboard/page.tsx to the presentational components, including FlightsTable.tsx and WeatherWidget.tsx.
 
 ##  Semantic Commits 🕵️
 Use semantic commits and branch naming. For references, please see below.
