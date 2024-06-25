@@ -1,0 +1,17 @@
+.systemMessages {
+  display: flex;
+  height: 180px;
+  background: var(
+    --Black,
+    linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0.9) 100%)
+  );
+  border-radius: 4px;
+  padding: var(--spacing-size-small);
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 50px;
+}

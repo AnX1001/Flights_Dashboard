@@ -1,0 +1,29 @@
+.paper {
+  border-radius: 4px;
+  background: var(
+    --Black,
+    linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0.9) 100%)
+  );
+  display: grid;
+  width: fit-content;
+  padding: var(--spacing-size-medium);
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 19px;
+  align-items: center;
+}
+
+.title {
+  line-height: 10px;
+}
+
+.logoTitleWrapper {
+  display: flex;
+  gap: var(--spacing-size-large);
+  padding-bottom: var(--spacing-size-large);
+  padding-top: var(--spacing-size-large);
+}
+
+.logo {
+  margin-left: 20px;
+}

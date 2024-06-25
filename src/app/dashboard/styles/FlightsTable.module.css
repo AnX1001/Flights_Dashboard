@@ -1,0 +1,31 @@
+.table {
+  padding: 20px;
+  grid-column: 1 / -1;
+  text-align: left;
+  color: white;
+  font-family: "Play", sans-serif;
+  font-size: 35px;
+}
+
+.table th {
+  color: var(--heading-color);
+  font-size: 35px;
+  padding-bottom: var(--spacing-size-medium);
+}
+
+.table td {
+  background-color: rgba(112, 112, 122, 0.26);
+  padding: 5px;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+}
+
+.captionScreenReaderOnly:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

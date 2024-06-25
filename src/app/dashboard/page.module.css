@@ -1,0 +1,19 @@
+.container {
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  background: var(
+    --Black,
+    linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0.9) 100%)
+  );
+}
+
+.widgets {
+  display: flex;
+  color: white;
+  gap: 10px;
+
+  width: inherit;
+
+  justify-content: space-between;
+}

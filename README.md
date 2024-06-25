@@ -1,36 +1,81 @@
+# Next.JS Dashboard Application: Flight-Board
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Frontend Architeture 🏗️
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Folder Structure 📂🍃
+````
+src/
+├── app/
+│   ├── api/
+│   │   ├── flights/
+│   │   ├── messages/
+│   │   └── weather/
+│   ├── dashboard/
+│   │   ├── components/
+│   │   │   ├── FlightsTable.tsx
+│   │   │   ├── SystemMessages.tsx
+│   │   │   └── WeatherWidget.tsx
+│   │   ├── styles/
+│   │   │   ├── FlightsTable.module.css
+│   │   │   ├── SystemMessages.module.css
+│   │   │   └── WeatherWidget.module.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+├── layout.tsx
+└── page.tsx
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+````
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Key Components and Their Roles 🗝️
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Root Layout (`app/layout.tsx`)**
+    - Provides the global HTML structure, including common elements like headers and footers.
 
-## Deploy on Vercel
+2. **Dashboard Layout (`app/dashboard/layout.tsx`)**
+    - Provides the shared structure for all dashboard items.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Page components (`app/dashboard/page.tsx`)**
+    - Handle data fetching for dashboard items.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. **Presentational Component (`app/dashboard/components/FlightsTable.tsx, WeaterWidget.tsx etc.`)**
+    - Receives data as props and handles the display logic.     
+
+##  Semantic Commits 🕵️
+Use semantic commits and branch naming. For references, please see below.
+
+### Feature Branches
+- `feature/user-authentication`
+
+### Bug Fix Branches
+- `bugfix/fix-login-error`
+
+### Hotfix Branches
+- `hotfix/security-vulnerability-patch`
+
+### Release Branches
+- `release/v1.2.0`
+
+### Improvement Branches
+- `improvement/refactor-user-service`
+
+### Experimentation Branches
+- `experiment/try-new-auth-method`
+
+### Documentation Branches
+- `docs/update-api-docs`
+
+### Chore Branches
+- `chore/update-dependencies`
+
+
