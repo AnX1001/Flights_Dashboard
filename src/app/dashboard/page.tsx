@@ -1,9 +1,8 @@
-import FlightsTable from "./components/FlightsTable";
+import { FlightsTable } from "./components/FlightsTable";
 import WeatherWidget from "./components/WeatherWidget";
 import SystemMessages from "./components/SystemMessages";
 import UserInfo from "./components/UserInfo";
 import styles from "./page.module.css";
-
 
 export default async function DashboardPage() {
   const [flightsRes] = await Promise.all([

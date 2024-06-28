@@ -2,7 +2,6 @@ import styles from "../styles/FlightsTable.module.css";
 import Paper from "./Paper";
 
 interface Flight {
-  time: string;
   flight: string;
   destination: string;
   gate: string;
@@ -14,7 +13,7 @@ interface Props {
   flights: Flight[];
 }
 
-export default async function FlightsTable({ flights }: Props) {
+export function FlightsTable({ flights }: Props) {
   const tableHeadings = ["Time", "Flight", "Destination", "Gate", "Status"];
   return (
     <Paper title="Departures">
@@ -34,7 +33,7 @@ export default async function FlightsTable({ flights }: Props) {
 
         <tbody>
           {flights.map((flightInfo) => (
-            <tr>
+            <tr key={flightInfo.flight}>
               <td>{flightInfo.departureTime}</td>
               <td>{flightInfo.flight}</td>
               <td>{flightInfo.gate}</td>
