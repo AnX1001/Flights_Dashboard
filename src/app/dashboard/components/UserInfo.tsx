@@ -4,9 +4,9 @@ export default function UserInfo() {
   return (
     <WidgetCard
       logoSrc="./Person.svg"
-      heading="Good morning, Kazuya!"
+      heading="Good morning, An!"
       imageAlt="image of a user"
-      info="You are successfully logged in."
+      info="You have successfully logged in."
     />
   );
 }

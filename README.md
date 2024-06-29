@@ -1,6 +1,6 @@
 # Dashboard Flights
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![alt text](./public/dashboard.png)
 
 ## Getting Started
 
@@ -12,3 +12,4 @@ npm run dev
 
 - [Developer Guidelines](documentation/Developer-Guidelines.md)
 - [Frontend Architecture](documentation/Frontend-Architecture.md)
+- [Configurations](documentation/Configurations.md)
