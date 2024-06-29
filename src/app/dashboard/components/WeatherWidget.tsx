@@ -1,11 +1,12 @@
-import styles from '../styles/WeatherWidget.module.css';
+import WidgetCard from './WidgetCard.tsx';
 
 export default function WeatherWidget() {
   return (
-    <div className={styles.weatherWidget}>
-      <img src="./WeatherWidgetIcon.svg" alt="illustration" className={styles.logo} />{' '}
-      <h2>Weather Forecast</h2>
-      <h3>Storm approaching, eta: 3 days.</h3>
-    </div>
+    <WidgetCard
+      logoSrc="./Weather.svg"
+      heading="Weather"
+      imageAlt="image of a cloud"
+      info="Storm approaching in 3 days."
+    />
   );
 }

@@ -1,9 +1,7 @@
 import { FlightsTable } from './FlightsTable';
 import { render } from '@testing-library/react';
 
-import { axe, toHaveNoViolations } from 'jest-axe';
-
-expect.extend(toHaveNoViolations);
+import { axe } from 'jest-axe';
 
 const mockFlights = [
   {

@@ -11,4 +11,6 @@
 
 .logo {
   width: 50px;
+  filter: invert(1);
+  padding: var(--spacing-size-medium);
 }

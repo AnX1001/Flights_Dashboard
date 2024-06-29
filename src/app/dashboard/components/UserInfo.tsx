@@ -1,11 +1,12 @@
-import styles from '../styles/UserInfo.module.css';
+import WidgetCard from './WidgetCard.tsx';
 
 export default function UserInfo() {
   return (
-    <div className={styles.userInfo}>
-      <img src="./SystemMessagesIcon.svg" alt="illustration" className={styles.logo} />{' '}
-      <h2>Good morning, Kazuya Mishima! </h2>
-      <h3>You are sucessfully logged in.</h3>
-    </div>
+    <WidgetCard
+      logoSrc="./Person.svg"
+      heading="Good morning, Kazuya!"
+      imageAlt="image of a user"
+      info="You are successfully logged in."
+    />
   );
 }
