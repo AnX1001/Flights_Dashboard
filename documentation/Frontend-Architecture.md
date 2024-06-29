@@ -14,10 +14,12 @@ src/
 │   │   │   ├── FlightsTable.tsx
 │   │   │   ├── SystemMessages.tsx
 │   │   │   └── WeatherWidget.tsx
+│   │   │   └── WidgetCard.tsx
 │   │   ├── styles/
 │   │   │   ├── FlightsTable.module.css
 │   │   │   ├── SystemMessages.module.css
 │   │   │   └── WeatherWidget.module.css
+│   │   │   └── WdigetCard.module.css
 │   │   ├── layout.tsx
 │   │   └── page.tsx
 ├── layout.tsx
