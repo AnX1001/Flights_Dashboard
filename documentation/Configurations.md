@@ -18,5 +18,3 @@ Unit tests utilize two testing libraries: `@testing-library/jest-dom` and `@test
 ## Jest-axe
 
 Jest-axe is employed for accessibility testing within Jest tests. The custom matcher `toHaveNoViolations` is globally integrated using `jest.setup.ts` and configured in `jest.config.ts`.
-
-This setup ensures that accessibility checks are automatically performed on rendered components to detect and prevent violations.
