@@ -1,5 +1,5 @@
-import styles from "../styles/FlightsTable.module.css";
-import Paper from "./Paper";
+import styles from '../styles/FlightsTable.module.css';
+import Paper from './Paper';
 
 interface Flight {
   flight: string;
@@ -14,13 +14,11 @@ interface Props {
 }
 
 export function FlightsTable({ flights }: Props) {
-  const tableHeadings = ["Time", "Flight", "Destination", "Gate", "Status"];
+  const tableHeadings = ['Time', 'Flight', 'Destination', 'Gate', 'Status'];
   return (
     <Paper title="Departures">
       <table className={styles.table}>
-        <caption className={styles.captionScreenReaderOnly}>
-          Flight Departures
-        </caption>
+        <caption className={styles.captionScreenReaderOnly}>Flight Departures</caption>
         <thead>
           <tr>
             {tableHeadings.map((tableHeading) => (

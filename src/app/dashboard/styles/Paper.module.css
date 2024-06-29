@@ -1,9 +1,6 @@
 .paper {
   border-radius: 4px;
-  background: var(
-    --Black,
-    linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0.9) 100%)
-  );
+  background: var(--Black, linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0.9) 100%));
   display: grid;
   width: fit-content;
   padding: var(--spacing-size-medium);

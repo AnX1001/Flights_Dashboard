@@ -1,4 +1,4 @@
-import styles from "../styles/Paper.module.css";
+import styles from '../styles/Paper.module.css';
 
 interface Props {
   title: string;
