@@ -13,3 +13,4 @@ npm run dev
 - [Developer Guidelines](documentation/Developer-Guidelines.md)
 - [Frontend Architecture](documentation/Frontend-Architecture.md)
 - [Configurations](documentation/Configurations.md)
+- [API Endpoints](documentation/API-Endpoints.md)
