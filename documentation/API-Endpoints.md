@@ -4,7 +4,16 @@
 
 This document provides information about the external APIs used in this project.
 
+## Adding a new API
+
+When adding a new API, please make sure to :
+
+- Describe the usage including method and parameters.
+- Provide an example response structure.
+
 ## Weather API 🌞
+
+### Docs: https://docs.api.met.no/doc/GettingStarted
 
 - **Name**: Norwegian Meteorological Institute's MET Weather API
 - **Endpoint**: `https://api.met.no/weatherapi/locationforecast/2.0/compact`
