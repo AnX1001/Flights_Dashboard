@@ -8,7 +8,7 @@
 }
 
 .table th {
-  color: var(--heading-color);
+  color: var(--primary-color);
   font-size: 35px;
   padding-bottom: var(--spacing-size-medium);
 }

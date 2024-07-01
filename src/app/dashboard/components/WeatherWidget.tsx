@@ -1,12 +1,16 @@
 import WidgetCard from './WidgetCard.tsx';
 
-export default function WeatherWidget() {
+interface Props {
+  airTemperature: string;
+}
+
+export default function WeatherWidget({ airTemperature }: Props) {
   return (
     <WidgetCard
       logoSrc="./Weather.svg"
       heading="Weather"
       imageAlt="image of a cloud"
-      info="Storm approaching in 3 days."
+      info={`Air temperature ${airTemperature} °C`}
     />
   );
 }
