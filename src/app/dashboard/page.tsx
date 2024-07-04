@@ -3,6 +3,7 @@ import WeatherWidget from './components/WeatherWidget';
 import SystemMessages from './components/SystemMessages';
 import UserInfo from './components/UserInfo';
 import styles from './page.module.css';
+import weatherLabels from './components/weatherLabels.json';
 
 export default async function DashboardPage() {
   const promises = [
@@ -27,13 +28,30 @@ export default async function DashboardPage() {
     weather?.data?.properties?.timeseries[0].data.instant.details.air_temperature ||
     ' No data available';
 
+  const symbolCode =
+    weather?.data?.properties?.timeseries[0].data.next_1_hours.summary.symbol_code ||
+    ' No weather icon available';
+
+  console.log(weather?.data?.properties?.timeseries[0].data);
+
   const flightData = flights?.flightData || [];
+
+  const matchWeatherText = (symbolCode: string) => {
+    const label = weatherLabels.find((label) => label['Symbol ID'] === symbolCode);
+    return label ? label.English : 'Ingen data tilgjengelig';
+  };
+
+  const weatherText = matchWeatherText(symbolCode);
 
   return (
     <div className={styles.container}>
       <div className={styles.widgets}>
         <UserInfo />
-        <WeatherWidget airTemperature={airTemperature} />
+        <WeatherWidget
+          weatherDescription={weatherText}
+          symbolCode={symbolCode}
+          airTemperature={airTemperature}
+        />
         <SystemMessages />
       </div>
       <FlightsTable flights={flightData} />

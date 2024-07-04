@@ -39,3 +39,7 @@ When adding a new API, please make sure to :
                   "air_pressure_at_sea_level": 1003,
                   "air_temperature": 18,
   ```
+
+### Weather Icons and Description Mappings
+
+Icons are retrieved from metno/weathericons repo. A mapping function converts symbol codes to weather descriptions by using a JSON file.

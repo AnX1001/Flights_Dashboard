@@ -6,7 +6,7 @@ export async function GET() {
   });
 
   const res = await fetch(
-    'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.9139&lon=10.7522',
+    'https://api.met.no/weatherapi/locationforecast/2.0/mini?lat=59.9139&lon=10.7522',
     { headers },
   );
 
