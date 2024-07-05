@@ -1,12 +1,26 @@
 import WidgetCard from './WidgetCard.tsx';
-
+import weatherLabels from './weatherLabels.json';
+import { WeatherData } from './types';
 interface Props {
-  airTemperature: string;
-  symbolCode: string;
-  weatherDescription: string;
+  weather: WeatherData;
 }
 
-export default function WeatherWidget({ weatherDescription, airTemperature, symbolCode }: Props) {
+export default function WeatherWidget({ weather }: Props) {
+  const airTemperature =
+    weather.data.properties.timeseries[0].data.instant.details.air_temperature ||
+    ' No data available';
+
+  const symbolCode =
+    weather.data.properties.timeseries[0].data.next_1_hours?.summary.symbol_code ||
+    ' No weather icon available';
+
+  const matchWeatherText = (symbolCode: string) => {
+    const label = weatherLabels.find((label) => label['Symbol ID'] === symbolCode);
+    return label ? label.English : 'No data available.';
+  };
+
+  const weatherDescription = matchWeatherText(symbolCode);
+
   return (
     <WidgetCard
       logoSrc={`./weatherIcons/${symbolCode}.svg`}
