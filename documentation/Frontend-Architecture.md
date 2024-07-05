@@ -48,3 +48,7 @@ src/
 ## Data Fetching
 
 The data is retrieved from a route handler, such as /api/flights/route.ts, and is then passed as props from the parent component /dashboard/page.tsx to the presentational components, including FlightsTable.tsx and WeatherWidget.tsx.
+
+### Component-based Architecture
+
+Each component should be responsible for a specific part of the UI and handle its own state and data shaping. For example, the `DashboardPage` component is responsible for data fetching, while the subcomponent `WeatherWidget` handles its own data transformation needs.
