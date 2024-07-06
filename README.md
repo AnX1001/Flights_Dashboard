@@ -15,3 +15,4 @@ npm run dev
 - [Configurations](documentation/Configurations.md)
 - [API Endpoints](documentation/API-Endpoints.md)
 - [UX Guidelines](documentation/UX-Guidelines.md)
+- [Error Handling](documentation/Error-Handling.md)
