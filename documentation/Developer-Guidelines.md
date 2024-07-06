@@ -36,4 +36,4 @@ Use semantic commits and branch naming. For references, please see below.
 
 ## Adding a new API
 
-PLease document usage details for any API in the [API Endpoints](API-Endpoints.md).
+Please document usage details for any API in the [API Endpoints](API-Endpoints.md).
