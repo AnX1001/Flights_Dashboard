@@ -1,0 +1,12 @@
+.faultyWidgetCard {
+  height: 180px;
+  border-radius: 4px;
+  padding: var(--spacing-size-small);
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+}
+
+.contactInfo {
+  color: var(--primary-color);
+}

@@ -1,11 +1,23 @@
+import FaultyWidgetCard from './FaultyWidgetCard.tsx';
 import WidgetCard from './WidgetCard.tsx';
 import weatherLabels from './weatherLabels.json';
 import { WeatherData } from './types';
 interface Props {
   weather: WeatherData;
+  error: string | null;
 }
 
-export default function WeatherWidget({ weather }: Props) {
+export default function WeatherWidget({ weather, error }: Props) {
+  if (error) {
+    return (
+      <FaultyWidgetCard
+        contactInfo="Please contact IT support at 555-456-7890"
+        errorInfo={error}
+        heading={`Weather data unavailable`}
+      />
+    );
+  }
+
   const airTemperature =
     weather.data.properties.timeseries[0].data.instant.details.air_temperature ||
     ' No data available';
