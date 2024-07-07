@@ -1,10 +1,22 @@
 import styles from '../styles/FlightsTable.module.css';
 import Paper from './Paper';
+import FaultyWidgetCard from './FaultyWidgetCard';
 
 interface Props {
   flights: FlightsData;
+  error: string | null;
 }
-export function FlightsTable({ flights }: Props) {
+export function FlightsTable({ flights, error }: Props) {
+  if (error) {
+    return (
+      <div className={styles.errorMessage}>
+        <h1>Departures</h1>
+        <h3>No data available</h3>
+        <h4> Please contact IT support at 555-456-7890</h4>
+      </div>
+    );
+  }
+
   const { flightData } = flights;
   const tableHeadings = ['Time', 'Flight', 'Destination', 'Gate', 'Status'];
   return (
@@ -33,6 +45,7 @@ export function FlightsTable({ flights }: Props) {
           ))}
         </tbody>
       </table>
+      )
     </Paper>
   );
 }

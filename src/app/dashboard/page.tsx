@@ -20,8 +20,8 @@ export default async function DashboardPage() {
     }
   }
 
-  const weather = await fetchData('http://localhost:3000/api/weather');
-  const flights = await fetchData('http://localhost:3000/api/flights');
+  const weather = await fetchData(`${process.env.NEXT_PUBLIC_WEATHER_API_URL}`);
+  const flights = await fetchData(`${process.env.NEXT_PUBLIC_FLIGHTS_API_URL}`);
 
   return (
     <div className={styles.container}>
@@ -30,7 +30,7 @@ export default async function DashboardPage() {
         <WeatherWidget weather={weather.data} error={weather.error} />
         <SystemMessages />
       </div>
-      <FlightsTable flights={flights.data} />
+      <FlightsTable flights={flights.data} error={flights.error} />
     </div>
   );
 }
