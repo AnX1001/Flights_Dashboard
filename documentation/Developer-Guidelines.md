@@ -37,3 +37,18 @@ Use semantic commits and branch naming. For references, please see below.
 ## Adding a new API
 
 Please document usage details for any API in the [API Endpoints](API-Endpoints.md).
+
+## Configuration issues
+
+To ensure that important environment variables are set and preventing runtime error, please add checks for the presence of required environment variables.
+
+E.g.
+
+```
+  const weatherApiUrl = process.env.NEXT_PUBLIC_WEATHER_API_URL;
+  const flightsApiUrl = process.env.NEXT_PUBLIC_FLIGHTS_API_URL;
+
+  if (!weatherApiUrl || !flightsApiUrl) {
+    throw new Error('API URLs must be defined in environment variables.');
+  }
+```

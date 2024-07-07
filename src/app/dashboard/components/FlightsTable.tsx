@@ -1,6 +1,5 @@
 import styles from '../styles/FlightsTable.module.css';
 import Paper from './Paper';
-import FaultyWidgetCard from './FaultyWidgetCard';
 
 interface Props {
   flights: FlightsData;
