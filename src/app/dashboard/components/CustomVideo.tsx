@@ -17,6 +17,8 @@ export default function CustomVideo({ heading }: Props) {
     );
   };
 
+  //TODO: Allow embedding of YouTube iframe, but prevent cross-site script injections, by configure DOMpurify to allow specific tags and attributes for iframes.
+
   return (
     <div className={styles.customVideo}>
       <div className={styles.headingTextAreaWrapper}>
