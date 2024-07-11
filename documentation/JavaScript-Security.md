@@ -14,16 +14,32 @@ This application includes a text area for embedding YouTube videos. To render th
 <p><a href="javascript:alert('Injected via a href')">More on this</a></p>
 ```
 
-`DOMPurify` is configure to allow YouTube iframes with the required attributes:
+## Installing DomPurify
+
+DomPurify is installed along with its TypeScript definitions:
 
 ```
-  const sanitizerConfig = {
-    ALLOWED_TAGS: ['iframe'],
-    ALLOWED_ATTR: [
-      'src', 'width', 'height', 'frameborder', 'allow', 'allowfullscreen',
-      'title', 'referrerpolicy'
-    ],
-    ALLOWED_URI_REGEXP: /^(https:\/\/www\.youtube\.com\/embed\/[a-zA-Z0-9_-]+\?.*)$/,
-  };
+npm install dompurify
+npm install --save-dev @types/dompurify@^3.0.5
+```
 
+## Configuring DOMPurify to Allow YouTube iframes
+
+To safely embed YouTube iframes while preventing cross-site scripting (XSS) attacks, I have configured DOMPurify with a specific set of allowed tags and attributes. Below is the configuration example:
+
+```javascript
+const sanitizerConfig = {
+  ALLOWED_TAGS: ['iframe'],
+  ALLOWED_ATTR: [
+    'src',
+    'width',
+    'height',
+    'frameborder',
+    'allow',
+    'allowfullscreen',
+    'title',
+    'referrerpolicy',
+  ],
+  ALLOWED_URI_REGEXP: /^(https:\/\/www\.youtube\.com\/embed\/[a-zA-Z0-9_-]+\?.*)$/,
+};
 ```
