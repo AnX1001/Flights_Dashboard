@@ -1,5 +1,6 @@
 import { FlightsTable } from './components/FlightsTable';
 import WeatherWidget from './components/WeatherWidget';
+import CustomVideo from './components/CustomVideo';
 import SystemMessages from './components/SystemMessages';
 import UserInfo from './components/UserInfo';
 import styles from './page.module.css';
@@ -32,6 +33,7 @@ export default async function DashboardPage() {
   return (
     <div className={styles.container}>
       <div className={styles.widgets}>
+        <CustomVideo heading="YouTubeVideo" />
         <UserInfo />
         <WeatherWidget weather={weather.data} error={weather.error} />
         <SystemMessages />

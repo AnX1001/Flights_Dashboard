@@ -17,6 +17,7 @@ export function FlightsTable({ flights, error }: Props) {
   }
 
   const { flightData } = flights;
+
   const tableHeadings = ['Time', 'Flight', 'Destination', 'Gate', 'Status'];
   return (
     <Paper title="Departures">
@@ -44,7 +45,6 @@ export function FlightsTable({ flights, error }: Props) {
           ))}
         </tbody>
       </table>
-      )
     </Paper>
   );
 }
