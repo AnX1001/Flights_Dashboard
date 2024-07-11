@@ -17,7 +17,20 @@ export default function CustomVideo({ heading }: Props) {
     );
   };
 
-  //TODO: Allow embedding of YouTube iframe, but prevent cross-site script injections, by configure DOMpurify to allow specific tags and attributes for iframes.
+  const sanitizerConfig = {
+    ALLOWED_TAGS: ['iframe'],
+    ALLOWED_ATTR: [
+      'src',
+      'width',
+      'height',
+      'title',
+      'frameborder',
+      'allow',
+      'allowfullscreen',
+      'referrerpolicy',
+    ],
+    ALLOWED_URI_REGEXP: /^(https:\/\/www\.youtube\.com\/embed\/[a-zA-Z0-9_-]+\?.*)$/,
+  };
 
   return (
     <div className={styles.customVideo}>
@@ -27,15 +40,15 @@ export default function CustomVideo({ heading }: Props) {
         {htmlContent ? (
           <div
             dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(htmlContent),
+              __html: DOMPurify.sanitize(htmlContent, sanitizerConfig),
             }}
           />
         ) : (
           <textarea
             value={htmlContent}
             onChange={handleChange}
-            rows={20}
-            cols={70}
+            rows={10}
+            cols={50}
             className={styles.textarea}
             placeholder="Please visit YouTube, click 'Share', and paste the embed code here."
           ></textarea>

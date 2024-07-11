@@ -33,11 +33,13 @@ export default async function DashboardPage() {
   return (
     <div className={styles.container}>
       <div className={styles.widgets}>
-        <CustomVideo heading="YouTubeVideo" />
         <UserInfo />
         <WeatherWidget weather={weather.data} error={weather.error} />
+
         <SystemMessages />
+        <CustomVideo heading="YouTubeVideo" />
       </div>
+
       <FlightsTable flights={flights.data} error={flights.error} />
     </div>
   );
