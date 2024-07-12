@@ -30,6 +30,7 @@ You can replace the tag name (`flightdash`) as desired. For example:
 ```bash
 docker run --env-file .env.local -p 3000:3000 my-nextjs-app
 ```
+...or use: docker-compose up --build 
 
 ### Rebuilding the Docker Image
 
