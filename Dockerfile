@@ -12,8 +12,17 @@ RUN npm install
 
 # Copy the rest of the application code
 COPY . .
+
 # Easily identify if the app is running inside docker
 ENV RUNNING_IN_DOCKER=true
+
+
+
+ENV CHOKIDAR_USEPOLLING=true
+ENV WATCHPACK_POLLING=true
+
+# Disable telemetry
+ENV NEXT_TELEMETRY_DISABLED 1
 
 # Expose the port that the Next.js app runs on
 EXPOSE 3000

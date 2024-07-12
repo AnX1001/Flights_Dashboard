@@ -57,6 +57,47 @@ Remember that changes to the `Dockerfile` or the environment variables require y
 
 In the user interface, the System message UI will display whether the app is running inside Docker or not.
 
-🚧🚧Hot Reloading is not working at the moment when running the app inside Docker.
+
+Sure, here is the rewritten section for your README.md to document hot reloading in Docker using Docker Compose:
+
+---
+
+### Hot Reloading in Docker using Docker Compose
+
+Hot reloading is enabled in Docker using Docker Compose. The `docker-compose.yml` is configured to expose the app at port 3000, read the local `.env.local` file for the API values, and enables hot reloading through `CHOKIDAR_USEPOLLING=true`.
+
+#### Docker Compose Configuration
+
+The `docker-compose.yml` file should include the following configuration:
+
+```yaml
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env.local
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: npm run dev
+    container_name: flight-container
+```
+
+#### Dockerfile Configuration
+
+To ensure hot reloading works correctly, the Dockerfile needs to enable polling for file changes:
+
+```Dockerfile
+# Enable polling for file changes
+ENV WATCHPACK_POLLING=true
+ENV CHOKIDAR_USEPOLLING=true
+```
 
 ---
