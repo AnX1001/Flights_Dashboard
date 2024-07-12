@@ -40,3 +40,4 @@ Now you can open [http://localhost:3000](http://localhost:3000) to view it in th
 - [UX Guidelines](documentation/UX-Guidelines.md)
 - [Error Handling](documentation/Error-Handling.md)
 - [JavaScript Security](documentation/JavaScript-Security)
+- [Dockerize](documentation/Dockerize)

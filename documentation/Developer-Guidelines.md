@@ -28,6 +28,7 @@ Use semantic commits and branch naming. For references, please see below.
 
 - **feat**: New feature for the user, not a new feature for build script.
 - **fix**: Bug fix for the user, not a fix to a build script.
+- **build**: Changes to the build system or external dependencies.
 - **docs**: Changes to the documentation.
 - **style**: Formatting, missing semi colons, etc.; no production code change.
 - **refactor**: Refactoring production code, e.g., renaming a variable.
