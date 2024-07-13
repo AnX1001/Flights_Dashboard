@@ -1,12 +1,30 @@
 import WidgetCard from './WidgetCard.tsx';
 
 export default function UserInfo() {
+  const now = new Date().toISOString();
+
+  const currentTime = now.split('T')[1].split('.')[0];
+
+  const getcurrentHour = new Date().getHours();
+
+  const timeGreeting = () => {
+    if (getcurrentHour > 12) {
+      return 'Good afternoon';
+    } else if (getcurrentHour > 16) {
+      return 'Good evening';
+    } else {
+      return 'Good morning';
+    }
+  };
+
   return (
-    <WidgetCard
-      logoSrc="./Person.svg"
-      heading="Good morning, An!"
-      imageAlt="image of a user"
-      info="You have successfully logged in."
-    />
+    <>
+      <WidgetCard
+        logoSrc="./Person.svg"
+        heading={`${timeGreeting()} An!`}
+        imageAlt="image of a user"
+        info={`Current time: ${currentTime}`}
+      />
+    </>
   );
 }
