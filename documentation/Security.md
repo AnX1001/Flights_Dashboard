@@ -43,5 +43,29 @@ const sanitizerConfig = {
   ALLOWED_URI_REGEXP: /^(https:\/\/www\.youtube\.com\/embed\/[a-zA-Z0-9_-]+\?.*)$/,
 };
 ```
+
 ## Content Security Policy
-//Todo: add extra security layer by configure CSP in routehandlers.
+
+The Content Security Policy (CSP) directives are configured to enhance security and allow specific external resources. Below is a snippet of configuration:
+
+```
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+img-src 'self' blob: data:;
+font-src 'self' https://fonts.gstatic.com;
+```
+
+### Directives Explained
+
+- **`style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`**:
+
+  - **'self'**: Allows styles from the same origin.
+  - **'unsafe-inline'**: Allows inline styles (necessary for some use cases but can be a security risk).
+  - **`https://fonts.googleapis.com`**: Allows stylesheets to be loaded from Google Fonts.
+
+- **`font-src 'self' https://fonts.gstatic.com`**:
+  - **'self'**: Allows fonts from the same origin.
+  - **`https://fonts.gstatic.com`**: Allows fonts to be loaded from Google Fonts.
+
+Whenever you use external sources, please configure the directives to allow the specific sources being used.
+
+![alt text](../public/cspWarning.png)
