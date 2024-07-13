@@ -1,4 +1,4 @@
-# JavaScript Security
+# Security
 
 ## Avoiding JavaScript Attack Vectors
 
