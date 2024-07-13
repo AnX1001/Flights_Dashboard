@@ -30,7 +30,8 @@ You can replace the tag name (`flightdash`) as desired. For example:
 ```bash
 docker run --env-file .env.local -p 3000:3000 my-nextjs-app
 ```
-...or use: docker-compose up --build 
+
+...or use: docker-compose up --build
 
 ### Rebuilding the Docker Image
 
@@ -54,12 +55,9 @@ Remember that changes to the `Dockerfile` or the environment variables require y
    docker run --env-file .env.local -p 3000:3000 flightdash
    ```
 
-### System Message Widget
+### System Message
 
 In the user interface, the System message UI will display whether the app is running inside Docker or not.
-
-
-Sure, here is the rewritten section for your README.md to document hot reloading in Docker using Docker Compose:
 
 ---
 
@@ -89,6 +87,18 @@ services:
       - CHOKIDAR_USEPOLLING=true
     command: npm run dev
     container_name: flight-container
+```
+
+To use Docker Compose, run the following command to build and start your services:
+
+```bash
+docker-compose up --build
+```
+
+To stop and remove containers, networks, and images created by `up`, use the following command:
+
+```bash
+docker-compose down
 ```
 
 #### Dockerfile Configuration
