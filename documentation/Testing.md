@@ -1,4 +1,4 @@
-# Configurations
+# Testing
 
 ## Jest
 

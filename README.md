@@ -35,7 +35,7 @@ Now you can open [http://localhost:3000](http://localhost:3000) to view it in th
 
 - [Developer Guidelines](documentation/Developer-Guidelines.md)
 - [Frontend Architecture](documentation/Frontend-Architecture.md)
-- [Configurations](documentation/Configurations.md)
+- [Testing](documentation/Testing.md)
 - [API Endpoints](documentation/API-Endpoints.md)
 - [UX Guidelines](documentation/UX-Guidelines.md)
 - [Error Handling](documentation/Error-Handling.md)
