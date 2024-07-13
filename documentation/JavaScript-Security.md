@@ -43,3 +43,5 @@ const sanitizerConfig = {
   ALLOWED_URI_REGEXP: /^(https:\/\/www\.youtube\.com\/embed\/[a-zA-Z0-9_-]+\?.*)$/,
 };
 ```
+## Content Security Policy
+//Todo: add extra security layer by configure CSP in routehandlers.
