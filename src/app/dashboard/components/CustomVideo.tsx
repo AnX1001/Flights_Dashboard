@@ -1,21 +1,18 @@
 'use client';
 
 import styles from '../styles/CustomVideo.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import DOMPurify from 'dompurify';
 
 interface Props {
   heading: string;
 }
 export default function CustomVideo({ heading }: Props) {
-  const [htmlContent, setHtmlContent] = useState('');
+  const [textareaInput, setTextareaInput] = useState('');
+  const [startVideo, setStartVideo] = useState(false);
+  const [buttonLabel, setButtonLabel] = useState('Show video');
 
-  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setHtmlContent(event.target.value);
-    alert(
-      'Warning: dangerouslySetInnerHTML is enabled. This text area input is susceptible to cross-site scripting (XSS) attacks.',
-    );
-  };
+  //TODO: add error handling for invalid embed code
 
   const sanitizerConfig = {
     ALLOWED_TAGS: ['iframe'],
@@ -32,27 +29,39 @@ export default function CustomVideo({ heading }: Props) {
     ALLOWED_URI_REGEXP: /^(https:\/\/www\.youtube\.com\/embed\/[a-zA-Z0-9_-]+\?.*)$/,
   };
 
+  const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setTextareaInput(DOMPurify.sanitize(event.target.value, sanitizerConfig));
+  };
+
+  const showVideo = () => {
+    setStartVideo(true);
+  };
+
   return (
     <div className={styles.customVideo}>
       <div className={styles.headingTextAreaWrapper}>
         <h2>{heading} </h2>
-
-        {htmlContent ? (
+        {startVideo ? (
           <div
             dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(htmlContent, sanitizerConfig),
+              __html: textareaInput,
             }}
           />
         ) : (
-          <textarea
-            value={htmlContent}
-            onChange={handleChange}
-            rows={10}
-            cols={50}
-            className={styles.textarea}
-            placeholder="Please visit YouTube, click 'Share', and paste the embed code here."
-          ></textarea>
+          <>
+            <textarea
+              onChange={handleInputChange}
+              value={textareaInput}
+              rows={10}
+              cols={50}
+              className={styles.textarea}
+              placeholder="Please visit YouTube, click 'Share', and paste the embed code here."
+            ></textarea>
+          </>
         )}
+        <button disabled={!textareaInput} onClick={showVideo}>
+          {buttonLabel}
+        </button>
       </div>
     </div>
   );
