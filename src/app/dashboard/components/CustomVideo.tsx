@@ -1,7 +1,7 @@
 'use client';
 
 import styles from '../styles/CustomVideo.module.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import DOMPurify from 'dompurify';
 
 interface Props {
@@ -9,32 +9,51 @@ interface Props {
 }
 export default function CustomVideo({ heading }: Props) {
   const [textareaInput, setTextareaInput] = useState('');
+  const [sanitizedContent, setSanitizedContent] = useState('');
   const [startVideo, setStartVideo] = useState(false);
   const [buttonLabel, setButtonLabel] = useState('Show video');
+  const [error, setError] = useState(false);
 
-  //TODO: add error handling for invalid embed code
-
-  const sanitizerConfig = {
-    ALLOWED_TAGS: ['iframe'],
-    ALLOWED_ATTR: [
-      'src',
-      'width',
-      'height',
-      'title',
-      'frameborder',
-      'allow',
-      'allowfullscreen',
-      'referrerpolicy',
-    ],
-    ALLOWED_URI_REGEXP: /^(https:\/\/www\.youtube\.com\/embed\/[a-zA-Z0-9_-]+\?.*)$/,
-  };
+  const validYouTubeEmbedCode =
+    /<iframe[^>]+src="https:\/\/www\.youtube\.com\/embed\/[a-zA-Z0-9_-]+\?.*"[^>]*><\/iframe>/;
 
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setTextareaInput(DOMPurify.sanitize(event.target.value, sanitizerConfig));
+    setTextareaInput(event.target.value);
+
+    const sanitized = DOMPurify.sanitize(event.target.value, {
+      ALLOWED_TAGS: ['iframe'],
+      ALLOWED_ATTR: [
+        'src',
+        'width',
+        'height',
+        'title',
+        'frameborder',
+        'allow',
+        'allowfullscreen',
+        'referrerpolicy',
+      ],
+    });
+
+    // Validate if the sanitized content contains a valid YouTube iframe
+    if (validYouTubeEmbedCode.test(sanitized)) {
+      setSanitizedContent(sanitized);
+      setError(false);
+    } else {
+      setSanitizedContent('');
+      setError(true);
+    }
   };
 
   const showVideo = () => {
-    setStartVideo(true);
+    if (!error && sanitizedContent) {
+      setStartVideo(true);
+      setButtonLabel('Insert new video');
+    }
+    if (startVideo) {
+      setStartVideo(false);
+      setButtonLabel('Show video');
+      setTextareaInput('');
+    }
   };
 
   return (
@@ -57,9 +76,10 @@ export default function CustomVideo({ heading }: Props) {
               className={styles.textarea}
               placeholder="Please visit YouTube, click 'Share', and paste the embed code here."
             ></textarea>
+            <p className={styles.error}>{error && 'Invalid embed code'}</p>
           </>
         )}
-        <button disabled={!textareaInput} onClick={showVideo}>
+        <button className={styles.button} disabled={!textareaInput || error} onClick={showVideo}>
           {buttonLabel}
         </button>
       </div>
