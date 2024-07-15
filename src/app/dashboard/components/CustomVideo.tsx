@@ -80,7 +80,7 @@ export default function CustomVideo() {
             </div>
           </>
         )}
-
+        {/* TODO: Extract the button into a reusable component and create a comprehensible Button UI. */}
         <button
           className={!error && textareaInput ? styles.button : styles.disabled}
           disabled={error || !textareaInput}
