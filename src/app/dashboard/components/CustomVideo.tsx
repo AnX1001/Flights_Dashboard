@@ -4,10 +4,7 @@ import styles from '../styles/CustomVideo.module.css';
 import { useState } from 'react';
 import DOMPurify from 'dompurify';
 
-interface Props {
-  heading: string;
-}
-export default function CustomVideo({ heading }: Props) {
+export default function CustomVideo() {
   const [textareaInput, setTextareaInput] = useState('');
   const [sanitizedContent, setSanitizedContent] = useState('');
   const [startVideo, setStartVideo] = useState(false);
@@ -57,9 +54,8 @@ export default function CustomVideo({ heading }: Props) {
   };
 
   return (
-    <div className={styles.customVideo}>
-      <div className={styles.headingTextAreaWrapper}>
-        <h2>{heading} </h2>
+    <div>
+      <div>
         {startVideo ? (
           <div
             dangerouslySetInnerHTML={{
@@ -69,17 +65,27 @@ export default function CustomVideo({ heading }: Props) {
         ) : (
           <>
             <textarea
-              onChange={handleInputChange}
+              onInput={handleInputChange}
               value={textareaInput}
-              rows={10}
-              cols={50}
+              rows={8}
               className={styles.textarea}
               placeholder="Please visit YouTube, click 'Share', and paste the embed code here."
             ></textarea>
-            <p className={styles.error}>{error && 'Invalid embed code'}</p>
+            <div className={styles.errorContainer}>
+              {error && (
+                <p className={styles.error}>
+                  * Invalid embed code. Please ensure you are using a valid YouTube embed code.
+                </p>
+              )}
+            </div>
           </>
         )}
-        <button className={styles.button} disabled={!textareaInput || error} onClick={showVideo}>
+
+        <button
+          className={!error && textareaInput ? styles.button : styles.disabled}
+          disabled={error || !textareaInput}
+          onClick={showVideo}
+        >
           {buttonLabel}
         </button>
       </div>
