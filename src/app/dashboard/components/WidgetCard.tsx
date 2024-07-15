@@ -4,7 +4,7 @@ import CustomVideo from './CustomVideo';
 interface Props {
   logoSrc?: string;
   heading: string;
-  info: string;
+  info: string | React.ReactNode;
   imageAlt?: string;
 }
 export default function WidgetCard({ logoSrc, imageAlt, heading, info }: Props) {

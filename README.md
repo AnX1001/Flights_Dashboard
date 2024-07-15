@@ -41,3 +41,4 @@ Now you can open [http://localhost:3000](http://localhost:3000) to view it in th
 - [Error Handling](documentation/Error-Handling.md)
 - [Security](documentation/Security.md)
 - [Dockerize](documentation/Dockerize.md)
+- [Hydration](documentation/Hydration.md)

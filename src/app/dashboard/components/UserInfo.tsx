@@ -42,7 +42,11 @@ export default function UserInfo() {
     <>
       <WidgetCard
         heading={`${timeGreeting()} An!`}
-        info={`Local time Oslo/Norway: ${currentTime}`}
+        info={
+          <time suppressHydrationWarning dateTime={currentTime}>
+            Local time Oslo/Norway: {currentTime}
+          </time>
+        }
       />
     </>
   );
