@@ -1,19 +1,21 @@
 import styles from '../styles/WidgetCard.module.css';
+import CustomVideo from './CustomVideo';
 
 interface Props {
-  logoSrc: string;
+  logoSrc?: string;
   heading: string;
   info: string;
-  imageAlt: string;
+  imageAlt?: string;
 }
 export default function WidgetCard({ logoSrc, imageAlt, heading, info }: Props) {
   return (
     <div className={styles.widgetCard}>
-      <div className={styles.logoTitleWrapper}>
-        <img src={logoSrc} alt={imageAlt} className={styles.logo} />
-        <h2>{heading} </h2>
+      <h2>{heading} </h2>
+
+      <div className={styles.infoIllustrationWrapper}>
+        <h3 className={styles.info}>{info}</h3>
+        {logoSrc && <img src={logoSrc} alt={imageAlt} className={styles.logo} />}
       </div>
-      <h3 className={styles.info}>{info}</h3>
     </div>
   );
 }

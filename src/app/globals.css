@@ -18,9 +18,19 @@ h1 {
 
 :root {
   --primary-color: #ffb800;
-  --spacing-size-small: 15px;
-  --spacing-size-medium: 20px;
-  --spacing-size-large: 35px;
+  --spacing-size-tiny: 5px;
+  --spacing-size-small: 10px;
+  --spacing-size-medium: 15px;
+  --spacing-size-large: 20px;
+  --spacing-size-huge: 25px;
+  --spacing-size-massive: 30px;
+  --spacing-size-gigantic: 35px;
+  --color-davys-gray: #5f5c5dff;
+  --color-golden-brown: #926715ff;
+  --color-selective-yellow: #ffb800ff;
+  --color-caf-noir: #523d1eff;
+  --color-eerie-black: #232324ff;
+  --color-error: #ff4c4c;
 }
 
 th {

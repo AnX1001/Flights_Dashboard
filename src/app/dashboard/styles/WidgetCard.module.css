@@ -1,24 +1,24 @@
 .widgetCard {
-  height: 180px;
-  background: var(--Black, linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0.9) 100%));
+  height: fit-content;
+  background-color: rgba(112, 112, 122, 0.26);
   border-radius: 4px;
-  padding: var(--spacing-size-small);
+  margin: var(--spacing-size-medium);
+  padding: var(--spacing-size-medium);
+
   width: 100%;
   align-items: center;
   gap: 8px;
 }
 
-.logoTitleWrapper {
+.infoIllustrationWrapper {
   display: flex;
-  align-items: center;
+  align-content: center;
 }
-
 .info {
-  padding-left: 30px;
   color: var(--primary-color);
 }
 
 .logo {
   width: 50px;
-  padding: var(--spacing-size-medium);
+  margin-left: var(--spacing-size-medium);
 }

@@ -10,24 +10,45 @@
 }
 
 .textarea {
-  font-size: 10px;
-  background: var(--primary-color);
+  font-size: 14px;
+  background: white;
+  width: 100%;
 }
 
 .error {
-  color: red;
-  font-size: 20px;
+  color: var(--color-error);
+  font-size: 12px;
+  font-style: italic;
 }
 
 .button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 15px;
+  background-color: orange;
+  color: white;
+  padding: 15px 32px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
   cursor: pointer;
-  outline: none;
-  color: black;
-  background-color: white;
-  border: none;
-  border-radius: 4px;
+}
+
+.disabled {
+  background-color: orange;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.errorContainer {
+  height: var(--spacing-size-large);
+
+  display: flex;
+  align-items: center;
 }

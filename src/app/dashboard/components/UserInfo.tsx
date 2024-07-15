@@ -19,12 +19,7 @@ export default function UserInfo() {
 
   return (
     <>
-      <WidgetCard
-        logoSrc="./Person.svg"
-        heading={`${timeGreeting()} An!`}
-        imageAlt="image of a user"
-        info={`Current time: ${currentTime}`}
-      />
+      <WidgetCard heading={`${timeGreeting()} An!`} info={`Current time: ${currentTime}`} />
     </>
   );
 }
