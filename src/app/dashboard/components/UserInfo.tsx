@@ -9,7 +9,7 @@ export default function UserInfo() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setNow(new Date());
-    }, 1000);
+    }, 60000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -18,7 +18,6 @@ export default function UserInfo() {
     timeZone: 'Europe/Oslo',
     hour: '2-digit',
     minute: '2-digit',
-    second: '2-digit',
   });
 
   const getCurrentHour = new Date().toLocaleString('nb-no', {
@@ -44,7 +43,7 @@ export default function UserInfo() {
         heading={`${timeGreeting()} An!`}
         info={
           <time suppressHydrationWarning dateTime={currentTime}>
-            Local time Oslo/Norway: {currentTime}
+            Local time: {currentTime}
           </time>
         }
       />

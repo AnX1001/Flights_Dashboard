@@ -27,6 +27,8 @@ Use semantic commits and branch naming. For references, please see below.
 `e.g. chore: install jest-axe library, style: format with prettier`
 
 - **feat**: New feature for the user, not a new feature for build script.
+- **ci**: Changes to our CI configuration files and scripts (example scope: gitHub actions).
+- **perf**: A code change that improves performance.
 - **fix**: Bug fix for the user, not a fix to a build script.
 - **build**: Changes to the build system or external dependencies.
 - **docs**: Changes to the documentation.
