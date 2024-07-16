@@ -30,7 +30,7 @@ Use semantic commits and branch naming. For references, please see below.
 - **ci**: Changes to our CI configuration files and scripts (example scope: gitHub actions).
 - **perf**: A code change that improves performance.
 - **fix**: Bug fix for the user, not a fix to a build script.
-- **build**: Changes to the build system or external dependencies.
+- **build**: Changes to the build system or external dependencies (example scope: docker).
 - **docs**: Changes to the documentation.
 - **style**: Formatting, missing semi colons, etc.; no production code change.
 - **refactor**: Refactoring production code, e.g., renaming a variable.
