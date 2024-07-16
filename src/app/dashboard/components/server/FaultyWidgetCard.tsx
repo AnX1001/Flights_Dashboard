@@ -1,4 +1,4 @@
-import styles from '../styles/FaultyWidgetCard.module.css';
+import styles from '../../styles/FaultyWidgetCard.module.css';
 
 interface Props {
   heading: string;

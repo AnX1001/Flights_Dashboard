@@ -1,6 +1,6 @@
 'use client';
-
-import WidgetCard from './WidgetCard.tsx';
+import { ReactProfiler } from '../../../utils/ReactProfiler';
+import WidgetCard from '../server/WidgetCard.tsx';
 import { useEffect, useState } from 'react';
 
 export default function UserInfo() {
@@ -39,14 +39,16 @@ export default function UserInfo() {
 
   return (
     <>
-      <WidgetCard
-        heading={`${timeGreeting()} An!`}
-        info={
-          <time suppressHydrationWarning dateTime={currentTime}>
-            Local time: {currentTime}
-          </time>
-        }
-      />
+      <ReactProfiler id="digitalClockUserInfo">
+        <WidgetCard
+          heading={`${timeGreeting()} An!`}
+          info={
+            <time suppressHydrationWarning dateTime={currentTime}>
+              Local time: {currentTime}
+            </time>
+          }
+        />
+      </ReactProfiler>
     </>
   );
 }

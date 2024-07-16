@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '../styles/CustomVideo.module.css';
+import styles from '../../styles/CustomVideo.module.css';
 import { useState } from 'react';
 import DOMPurify from 'dompurify';
 

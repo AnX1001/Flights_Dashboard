@@ -1,8 +1,8 @@
-import { FlightsTable } from './components/FlightsTable';
-import WeatherWidget from './components/WeatherWidget';
-import VideoCard from './components/VideoCard';
-import SystemMessages from './components/SystemMessages';
-import UserInfo from './components/UserInfo';
+import { FlightsTable } from './components/server/FlightsTable';
+import WeatherWidget from './components/server/WeatherWidget';
+import VideoCard from './components/server/VideoCard';
+import SystemMessages from './components/server/SystemMessages';
+import UserInfo from './components/client/UserInfo';
 import styles from './page.module.css';
 
 export default async function DashboardPage() {
