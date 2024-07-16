@@ -2,6 +2,8 @@
 
 ## Folder Structure
 
+The folder structure of this project is organized to clearly separate UI components based on whether they are intended for server-side or client-side rendering.
+
 ```
 src/
 ├── app/
@@ -11,21 +13,13 @@ src/
 │   │   └── weather/
 │   ├── dashboard/
 │   │   ├── components/
-│   │   │   ├── FlightsTable.tsx
-│   │   │   ├── SystemMessages.tsx
-│   │   │   └── WeatherWidget.tsx
-│   │   │   └── WidgetCard.tsx
+│   │   │   ├── client/
+│   │   │   ├── server/
 │   │   ├── styles/
-│   │   │   ├── FlightsTable.module.css
-│   │   │   ├── SystemMessages.module.css
-│   │   │   └── WeatherWidget.module.css
-│   │   │   └── WdigetCard.module.css
 │   │   ├── layout.tsx
 │   │   └── page.tsx
 ├── layout.tsx
 └── page.tsx
-
-
 ```
 
 ## Key Components and Their Roles
