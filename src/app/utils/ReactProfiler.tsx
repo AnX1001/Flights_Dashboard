@@ -19,9 +19,13 @@ const onRenderCallback = (
 };
 
 export function ReactProfiler({ id, children }: { id: string; children: React.ReactNode }) {
-  return (
-    <Profiler id={id} onRender={onRenderCallback}>
-      {children}
-    </Profiler>
-  );
+  if (process.env.NODE_ENV === 'development') {
+    return (
+      <Profiler id={id} onRender={onRenderCallback}>
+        {children}
+      </Profiler>
+    );
+  }
+
+  return <>{children}</>;
 }

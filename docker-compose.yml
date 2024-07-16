@@ -13,5 +13,6 @@ services:
       - .env.local
     environment:
       - CHOKIDAR_USEPOLLING=true
+      - NODE_ENV=development # In order to ReactProfiler
     command: npm run dev
     container_name: flight-container
