@@ -65,6 +65,7 @@ export default function CustomVideo() {
         ) : (
           <>
             <textarea
+              name="youtubeEmbedCode"
               onInput={handleInputChange}
               value={textareaInput}
               rows={8}
