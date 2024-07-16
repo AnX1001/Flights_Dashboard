@@ -21,34 +21,9 @@
   font-style: italic;
 }
 
-.button {
-  background-color: orange;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.disabled {
-  background-color: orange;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
 .errorContainer {
-  height: var(--spacing-size-large);
-
+  height: var(--spacing-size-massive);
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
 }

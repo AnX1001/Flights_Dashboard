@@ -25,12 +25,14 @@ h1 {
   --spacing-size-huge: 25px;
   --spacing-size-massive: 30px;
   --spacing-size-gigantic: 35px;
-  --color-davys-gray: #5f5c5dff;
-  --color-golden-brown: #926715ff;
-  --color-selective-yellow: #ffb800ff;
-  --color-caf-noir: #523d1eff;
+  --color--gray: #5f5c5dff;
+  --color--brown: #926715ff;
+  --color-cafe-noir: #523d1eff;
   --color-eerie-black: #232324ff;
   --color-error: #ff4c4c;
+
+  --primary-hover-color: #ffa500;
+  --primary-active-color: #cc8e00;
 }
 
 th {

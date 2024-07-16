@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '../server/Button';
 import styles from '../../styles/CustomVideo.module.css';
 import { useState } from 'react';
 import DOMPurify from 'dompurify';
@@ -81,14 +82,9 @@ export default function CustomVideo() {
             </div>
           </>
         )}
-        {/* TODO: Extract the button into a reusable component and create a comprehensible Button UI. */}
-        <button
-          className={!error && textareaInput ? styles.button : styles.disabled}
-          disabled={error || !textareaInput}
-          onClick={showVideo}
-        >
+        <Button error={error} disabled={error || !textareaInput} onClick={showVideo}>
           {buttonLabel}
-        </button>
+        </Button>
       </div>
     </div>
   );
