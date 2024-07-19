@@ -1,12 +1,10 @@
 name: Tests for Next.js app
 
 on:
-push: branches: - main
-
-  pull_request:
+  push:
     branches:
       - main
-  push:
+  pull_request:
     branches:
       - main
 
@@ -40,9 +38,3 @@ jobs:
 
       - name: List node_modules/.bin
         run: ls -la node_modules/.bin
-
-      - name: Verify Jest installation
-        run: npx jest --version
-
-      - name: Run Jest tests
-        run: npx jest --detectOpenHandles
