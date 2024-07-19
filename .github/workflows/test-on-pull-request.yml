@@ -1,4 +1,4 @@
-name: Run Tests
+name: Tests for Next.js app
 
 on:
   push:
@@ -9,23 +9,23 @@ on:
       - main
 
 jobs:
-  test:
+  NextJS-Tests:
+    name: Tests for Next.js app
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version:  '22'
 
       - name: Install dependencies
-        run: npm ci
-
-      - name: List node_modules/.bin
-        run: ls -la node_modules/.bin
+        run: |
+          npm install
 
       - name: Run Jest tests
         run: npm test
