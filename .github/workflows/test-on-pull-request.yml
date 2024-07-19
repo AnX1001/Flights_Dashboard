@@ -22,7 +22,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20' # Make sure to use the latest STABLE version of Node.js
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Run tests
+        run: npm run test -- --coverage
