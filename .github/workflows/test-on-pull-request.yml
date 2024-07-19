@@ -1,9 +1,6 @@
 name: Tests for Next.js app
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -15,17 +12,29 @@ jobs:
 
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version:  '22'
+          node-version: '22'
+
+      - name: Upgrade npm
+        run: npm install -g npm@latest
+
+      - name: Clear npm cache
+        run: npm cache clean --force
 
       - name: Install dependencies
-        run: |
-          npm install
+        run: npm ci
+
+      - name: List node_modules
+        run: ls -la node_modules
+
+      - name: List node_modules/.bin
+        run: ls -la node_modules/.bin
 
       - name: Run Jest tests
-        run: npm test
+        run: npx jest
