@@ -36,8 +36,5 @@ jobs:
       - name: List node_modules
         run: ls -la node_modules
 
-      - name: List node_modules/.bin
-        run: ls -la node_modules/.bin
-
       - name: Run Jest tests
         run: npx jest
