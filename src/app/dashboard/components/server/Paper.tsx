@@ -9,7 +9,7 @@ export default function Paper({ title, children }: Props) {
   return (
     <div className={styles.paper}>
       <span className={styles.logoTitleWrapper}>
-        <Image src="/Logo.svg" alt="Flylogo" className={styles.logo} />
+        <Image src="/Logo.svg" height={100} width={100} alt="Flylogo" className={styles.logo} />
         <h1 className={styles.title}>{title}</h1>
       </span>
 
