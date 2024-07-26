@@ -1,7 +1,14 @@
 {
-  "extends": ["next/core-web-vitals", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:security/recommended-legacy"
+  ],
+  "plugins": ["security"],
   "rules": {
+    "security/detect-unsafe-regex": "warn",
     "no-console": ["error"],
-    "semi": ["error"]
+    "semi": ["error"],
+    "react/no-danger": "warn"
   }
 }

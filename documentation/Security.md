@@ -40,8 +40,24 @@ const sanitizerConfig = {
     'title',
     'referrerpolicy',
   ],
-  ALLOWED_URI_REGEXP: /^(https:\/\/www\.youtube\.com\/embed\/[a-zA-Z0-9_-]+\?.*)$/,
+  ALLOWED_URI_REGEXP:
+    /^(https:\/\/www\.youtube\.com\/embed\/[a-zA-Z0-9_-]+\?.*)$/,
 };
+```
+
+## Warning dangerouslySetInnerHTML
+The eslint-plugin-security library is installed with rules to warn or report errors when using dangerouslySetInnerHTML.
+
+```json
+"react/no-danger": "error"
+```
+
+## Regular Expression Denial of Service (ReDos)
+
+The rule (part of the eslint within Next.js) below warns you about potential Regular Expression Denial of Service (ReDoS) vulnerabilities by identifying unsafe regular expressions.
+
+```json
+"security/detect-unsafe-regex": "warn"
 ```
 
 ## Content Security Policy
