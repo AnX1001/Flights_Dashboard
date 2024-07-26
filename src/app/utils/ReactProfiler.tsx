@@ -8,7 +8,7 @@ const onRenderCallback = (
   startTime: number,
   commitTime: number,
 ) => {
-  console.log({
+  console.log({ // eslint-disable-line no-console
     id,
     phase,
     actualDuration,

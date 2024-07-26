@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from '../../styles/Paper.module.css';
 
 interface Props {
@@ -8,7 +9,7 @@ export default function Paper({ title, children }: Props) {
   return (
     <div className={styles.paper}>
       <span className={styles.logoTitleWrapper}>
-        <img src="/Logo.svg" alt="Flylogo" className={styles.logo} />
+        <Image src="/Logo.svg" alt="Flylogo" className={styles.logo} />
         <h1 className={styles.title}>{title}</h1>
       </span>
 
