@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: 'Dashboard',
 };
 
+ 
 export default function RootLayout({
   children,
 }: Readonly<{
