@@ -39,9 +39,9 @@
   },
   "lint-staged": {
     "*.{ts,tsx,css,scss,js,html}": [
-      "npm run test -- --passWithNoTests",
-      "eslint",
-      "prettier --write"
+      "echo 'Run staged test if they exists...' && npm run test -- --passWithNoTests",
+      "echo 'Run Next lint...' && eslint",
+      "echo 'Format staged files with prettier...' && prettier --write"
     ]
   }
 }
