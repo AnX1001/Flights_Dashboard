@@ -38,9 +38,10 @@
     "typescript": "5.5"
   },
   "lint-staged": {
-    "*.{ts,tsx,css,scss}": [
+    "*.{ts,tsx,css,scss,js,html}": [
       "npm run test -- --passWithNoTests",
-      "eslint"
+      "eslint",
+      "prettier --write"
     ]
   }
 }
