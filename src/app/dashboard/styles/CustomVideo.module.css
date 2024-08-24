@@ -1,5 +1,8 @@
 .customVideo {
-  background: var(--Black, linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0.9) 100%));
+  background: var(
+    --Black,
+    linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0.9) 100%)
+  );
   border-radius: 4px;
   margin-top: 10px;
   padding: var(--spacing-size-small);
@@ -7,6 +10,10 @@
   align-items: center;
   gap: 8px;
   width: fit-content;
+}
+
+.labelTextArea {
+  font-size: 14px;
 }
 
 .textarea {

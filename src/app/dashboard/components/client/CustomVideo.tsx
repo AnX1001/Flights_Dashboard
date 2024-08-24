@@ -65,7 +65,11 @@ export default function CustomVideo() {
           />
         ) : (
           <>
+            <label htmlFor="embeddedCode" className={styles.labelTextArea}>
+              Embed YouTube video 
+            </label>
             <textarea
+              id="embeddedCode"
               name="youtubeEmbedCode"
               onInput={handleInputChange}
               value={textareaInput}
@@ -73,16 +77,22 @@ export default function CustomVideo() {
               className={styles.textarea}
               placeholder="Please visit YouTube, click 'Share', and paste the embed code here."
             ></textarea>
+
             <div className={styles.errorContainer}>
               {error && (
                 <p className={styles.error}>
-                  * Invalid embed code. Please ensure you are using a valid YouTube embed code.
+                  * Invalid embed code. Please ensure you are using a valid
+                  YouTube embed code.
                 </p>
               )}
             </div>
           </>
         )}
-        <Button error={error} disabled={error || !textareaInput} onClick={showVideo}>
+        <Button
+          error={error}
+          disabled={error || !textareaInput}
+          onClick={showVideo}
+        >
           {buttonLabel}
         </Button>
       </div>
