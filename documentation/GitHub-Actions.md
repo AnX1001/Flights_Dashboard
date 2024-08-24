@@ -7,9 +7,15 @@
 The workflow for this application is automated using Github Actions.
 
 ```yaml
-name: Run Tests on Pull Request
+name: Run Tests on Pull Request and Push to Main
 
-on: pull_request
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test:
