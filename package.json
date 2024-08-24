@@ -7,8 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "test": "jest",
+    "lint": "echo 'Running next lint....' && next lint",
+    "test": "echo 'Running jest...' && jest",
     "prepare": "husky"
   },
   "dependencies": {
