@@ -1,10 +1,10 @@
 .faultyWidgetCard {
   height: 180px;
-  border-radius: 4px;
+  border-radius: var(--border-radius-small);
   padding: var(--spacing-size-small);
   width: 100%;
   align-items: center;
-  gap: 8px;
+  gap: var(--gap-size-medium);
   color: white;
 }
 

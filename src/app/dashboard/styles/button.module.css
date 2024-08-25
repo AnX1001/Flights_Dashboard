@@ -4,7 +4,7 @@
   padding: 16px 32px;
   text-decoration: none;
   border: none;
-  font-size: 16px;
+  font-size: var(--font-size-medium);
   cursor: pointer;
   width: fit-content;
   background: var(--primary-color);
@@ -27,7 +27,7 @@
   padding: 16px 32px;
   width: fit-content;
   display: inline-block;
-  font-size: 16px;
+  font-size: var(--font-size-medium);
   margin: 4px 2px;
   opacity: 0.6;
   cursor: not-allowed;

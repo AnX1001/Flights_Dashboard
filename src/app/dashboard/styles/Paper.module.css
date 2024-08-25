@@ -1,12 +1,12 @@
 .paper {
-  border-radius: 4px;
+  border-radius: var(--border-radius-small);
   background: var(--Black, linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0.9) 100%));
   display: grid;
   width: fit-content;
   padding: var(--spacing-size-medium);
 
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 19px;
+  gap:  var(--gap-size-medium);
   align-items: center;
 }
 
@@ -22,5 +22,5 @@
 }
 
 .logo {
-  margin-left: 20px;
+  margin-left: var(--spacing-size-large);
 }

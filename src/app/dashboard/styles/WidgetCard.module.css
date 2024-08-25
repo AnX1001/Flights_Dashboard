@@ -1,13 +1,13 @@
 .widgetCard {
   height: fit-content;
   background-color: rgba(112, 112, 122, 0.26);
-  border-radius: 4px;
+  border-radius: var(--border-radius-small);
   margin: var(--spacing-size-medium);
   padding: var(--spacing-size-medium);
 
   width: 100%;
   align-items: center;
-  gap: 8px;
+  gap:  var(--gap-size-medium);
 }
 
 .infoIllustrationWrapper {
