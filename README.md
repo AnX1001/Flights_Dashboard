@@ -42,5 +42,5 @@ Now you can open [http://localhost:3000](http://localhost:3000) to view it in th
 - [Security](documentation/Security.md)
 - [Dockerize](documentation/Dockerize.md)
 - [Hydration](documentation/Hydration.md)
-- [Github Actions](documentation/Github-Actions.md)
+- [Github Actions](documentation/GitHub-Actions.md)
 - [Authentication](documentation/Authentication.md)

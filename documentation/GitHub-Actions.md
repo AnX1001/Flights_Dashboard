@@ -2,8 +2,6 @@
 
 ## Github Actions
 
-1
-
 The workflow for this application is automated using Github Actions.
 
 ```yaml
