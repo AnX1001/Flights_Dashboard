@@ -4,6 +4,8 @@ import VideoCard from './components/server/VideoCard';
 import SystemMessages from './components/server/SystemMessages';
 import UserInfo from './components/client/UserInfo';
 import styles from './page.module.css';
+import { auth } from '../auth';
+import { LinkButton } from './components/server/LinkButton';
 
 export default async function DashboardPage() {
   async function fetchData(url: string) {
@@ -16,7 +18,8 @@ export default async function DashboardPage() {
       const json = await response.json();
       return { data: json, error: null };
     } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : String(error);
+      const errorMessage =
+        error instanceof Error ? error.message : String(error);
       return { data: null, error: errorMessage };
     }
   }
@@ -30,10 +33,18 @@ export default async function DashboardPage() {
   const weather = await fetchData(weatherApiUrl);
   const flights = await fetchData(flightsApiUrl);
 
+  const session = await auth();
+
   return (
     <div className={styles.container}>
+      {session !== null ? (
+        <LinkButton label="Sign Out" href="/api/auth/signout" />
+      ) : (
+        <LinkButton label="Sign In" href="/api/auth/signin" />
+      )}
+
       <div className={styles.widgets}>
-        <UserInfo />
+        <UserInfo userName={session?.user?.name} />
         <WeatherWidget weather={weather.data} error={weather.error} />
         <SystemMessages />
         <VideoCard />

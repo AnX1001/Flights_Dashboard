@@ -19,15 +19,17 @@ export default function WeatherWidget({ weather, error }: Props) {
   }
 
   const airTemperature =
-    weather.data.properties.timeseries[0].data.instant.details.air_temperature ||
-    ' No data available';
+    weather.data.properties.timeseries[0].data.instant.details
+      .air_temperature || ' No data available';
 
   const symbolCode =
-    weather.data.properties.timeseries[0].data.next_1_hours?.summary.symbol_code ||
-    ' No weather icon available';
+    weather.data.properties.timeseries[0].data.next_1_hours?.summary
+      .symbol_code || ' No weather icon available';
 
   const matchWeatherText = (symbolCode: string) => {
-    const label = weatherLabels.find((label) => label['Symbol ID'] === symbolCode);
+    const label = weatherLabels.find(
+      (label) => label['Symbol ID'] === symbolCode
+    );
     return label ? label.English : 'No data available.';
   };
 

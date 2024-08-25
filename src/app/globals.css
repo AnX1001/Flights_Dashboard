@@ -43,6 +43,7 @@ h1 {
   --font-size-xlarge: 1.25rem;;
 
   --border-radius-small: 4px;
+  --border-radius-medium: 8px;
   --gap-small: 5px;
   --gap-medium: 10px;
   --gap-large: 20px;

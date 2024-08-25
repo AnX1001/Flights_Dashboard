@@ -3,7 +3,11 @@ import { ReactProfiler } from '../../../utils/ReactProfiler';
 import WidgetCard from '../server/WidgetCard.tsx';
 import { useEffect, useState } from 'react';
 
-export default function UserInfo() {
+export default function UserInfo({
+  userName,
+}: {
+  userName: string | undefined | null;
+}) {
   const [now, setNow] = useState(new Date());
 
   useEffect(() => {
@@ -37,11 +41,15 @@ export default function UserInfo() {
     }
   };
 
+  const loggedInUser = userName
+    ? userName + '! You are logged in!'
+    : 'Guest! You are not logged in.';
+
   return (
     <>
       <ReactProfiler id="digitalClockUserInfo">
         <WidgetCard
-          heading={`${timeGreeting()} An!`}
+          heading={`${timeGreeting()} ${loggedInUser}`}
           info={
             <time suppressHydrationWarning dateTime={currentTime}>
               Local time: {currentTime}
