@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint:ts": "next lint",
+    "tsc:check": "tsc --noEmit --skipLibCheck",
     "test": "jest",
     "prepare": "husky"
   },
@@ -37,12 +38,5 @@
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.2.9",
     "typescript": "5.5"
-  },
-  "lint-staged": {
-    "*.{ts,tsx,css,scss,js,html}": [
-      "echo 'Run staged test if they exists...' && npm run test -- --passWithNoTests",
-      "echo 'Run Next lint...' && eslint",
-      "echo 'Format staged files with prettier...' && prettier --write"
-    ]
   }
 }
