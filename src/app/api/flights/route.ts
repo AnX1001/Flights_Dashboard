@@ -31,13 +31,5 @@ const flightData = [
 ];
 
 export async function GET() {
-  /*   const headers = new Headers({
-          'Content-Type': 'application/json',
-          'API-Key': process.env.DATA_API_KEY ?? '',
-      });
-
-      const res = await fetch('https://data.mdb-api.com/...', { headers });
-      const data = await res.json(); */
-
   return NextResponse.json({ flightData });
 }

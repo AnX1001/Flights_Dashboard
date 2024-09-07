@@ -6,6 +6,7 @@ import UserInfo from './components/client/UserInfo';
 import styles from './page.module.css';
 import { auth } from '../auth';
 import { LinkButton } from './components/server/LinkButton';
+import InternalLogs from './components/server/InternalLogs';
 
 export default async function DashboardPage() {
   async function fetchData(url: string) {
@@ -18,8 +19,7 @@ export default async function DashboardPage() {
       const json = await response.json();
       return { data: json, error: null };
     } catch (error) {
-      const errorMessage =
-        error instanceof Error ? error.message : String(error);
+      const errorMessage = error instanceof Error ? error.message : String(error);
       return { data: null, error: errorMessage };
     }
   }
@@ -48,7 +48,10 @@ export default async function DashboardPage() {
         <WeatherWidget weather={weather.data} error={weather.error} />
         <SystemMessages />
         <VideoCard />
+        {session?.user?.name === 'An'}
+        <InternalLogs />
       </div>
+
       <FlightsTable flights={flights.data} error={flights.error} />
     </div>
   );

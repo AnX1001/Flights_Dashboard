@@ -1,0 +1,10 @@
+.internalLogs {
+  background-color: rgba(112, 112, 122, 0.26);
+  border-radius: var(--border-radius-small);
+  width: fit-content;
+  max-width: 550px;
+  margin: var(--spacing-size-medium);
+  padding: var(--spacing-size-medium);
+  color: red;
+  font-family: 'Aldrich', sans-serif;
+}
