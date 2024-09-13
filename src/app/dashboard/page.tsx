@@ -37,11 +37,12 @@ export default async function DashboardPage() {
 
   return (
     <div className={styles.container}>
-      {session !== null ? (
-        <LinkButton label="Sign Out" href="/api/auth/signout" />
-      ) : (
-        <LinkButton label="Sign In" href="/api/auth/signin" />
-      )}
+      <header className={styles.header}>
+        <LinkButton
+          label={session === null ? 'Sign In' : 'Sign Out'}
+          href={session === null ? '/' : '/api/auth/signout'}
+        />
+      </header>
 
       <div className={styles.widgets}>
         <UserInfo userName={session?.user?.name} />
@@ -49,7 +50,7 @@ export default async function DashboardPage() {
         <SystemMessages />
         <VideoCard />
         {session?.user?.name === 'An'}
-        <InternalLogs />
+        {session?.user?.name === 'An' && <InternalLogs />}
       </div>
 
       <FlightsTable flights={flights.data} error={flights.error} />

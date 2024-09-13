@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   description: 'Dashboard',
 };
 
- 
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -15,11 +14,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
-
-
-
-      
       <body>{children}</body>
     </html>
   );

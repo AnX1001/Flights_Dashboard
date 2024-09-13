@@ -1,29 +1,25 @@
 .linkButton {
-    color: black;
-    outline: none;
-    padding: 16px 32px;
-    text-decoration: none;
-    border: none;
-    font-size: var(--font-size-large);
-    cursor: pointer;
-    width: fit-content;
-    background: var(--primary-color);
-    transition-duration: 0.4s;
-    margin-left: auto;
-    margin-right: var(--spacing-size-huge);
-    margin-top: var(--spacing-size-small);
-    border-radius: var(--border-radius-medium);
+  color: black;
+  outline: none;
+  padding: 16px 32px;
+  text-decoration: none;
+  border: none;
+  font-size: var(--font-size-large);
+  cursor: pointer;
+  width: fit-content;
+  background: var(--primary-color);
+  transition-duration: 0.4s;
 
+  margin-top: var(--spacing-size-small);
+  border-radius: var(--border-radius-medium);
 }
-  
-  .linkButton:active:hover {
-    background-color: var(--primary-active-color);
-  }
-  
-  .linkButton:hover {
-    background-color: var(--primary-hover-color);
-    outline: none;
-    color: white;
-  }
-  
-  
+
+.linkButton:active:hover {
+  background-color: var(--primary-active-color);
+}
+
+.linkButton:hover {
+  background-color: var(--primary-hover-color);
+  outline: none;
+  color: white;
+}

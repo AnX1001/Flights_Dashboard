@@ -1,9 +1,13 @@
 .container {
   display: grid;
-  gap:  var(--gap-size-medium);
+  gap: var(--gap-size-medium);
   background: var(--Black, linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0.9) 100%));
 }
 
+.header {
+  padding: 20px;
+  margin-left: auto;
+}
 .widgets {
   display: flex;
   color: white;
