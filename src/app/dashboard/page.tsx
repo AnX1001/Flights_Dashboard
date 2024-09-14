@@ -50,7 +50,6 @@ export default async function DashboardPage() {
         <WeatherWidget weather={weather.data} error={weather.error} />
         <SystemMessages />
         <VideoCard />
-        {session?.user?.name === 'An'}
         {session?.user?.name === 'An' && <InternalLogs />}
       </div>
 
