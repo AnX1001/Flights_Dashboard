@@ -1,5 +1,6 @@
 import { FlightsTable } from './components/server/FlightsTable';
 import WeatherWidget from './components/server/WeatherWidget';
+import { SessionDialog } from './components/client/SessionDialog';
 import VideoCard from './components/server/VideoCard';
 import SystemMessages from './components/server/SystemMessages';
 import UserInfo from './components/client/UserInfo';
@@ -40,7 +41,7 @@ export default async function DashboardPage() {
       <header className={styles.header}>
         <LinkButton
           label={session === null ? 'Sign In' : 'Sign Out'}
-          href={session === null ? '/' : '/api/auth/signout'}
+          href={session === null ? '/api/auth/signin' : '/api/auth/signout'}
         />
       </header>
 
@@ -54,6 +55,7 @@ export default async function DashboardPage() {
       </div>
 
       <FlightsTable flights={flights.data} error={flights.error} />
+      <SessionDialog />
     </div>
   );
 }

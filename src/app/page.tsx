@@ -1,12 +1,5 @@
-import { auth } from './auth';
-import Login from './dashboard/components/client/Login';
+import { redirect } from 'next/navigation';
 
 export default async function Home() {
-  const session = await auth();
-
-  return (
-    <>
-      <Login session={session} />
-    </>
-  );
+  return redirect('/dashboard');
 }
