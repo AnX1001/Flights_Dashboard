@@ -43,3 +43,27 @@ When adding a new API, please make sure to :
 ### Weather Icons and Description Mappings
 
 Icons are retrieved from metno/weathericons repo. A mapping function converts symbol codes to weather descriptions by using a JSON file.
+
+## Flights API Setup ✈️
+
+This application uses a locally hosted Flights API backend. To get started, follow the steps below:
+
+### 1. Clone the Repository
+
+Clone the Flights API repository from my GitHub.
+
+### 2. Build and Run the Application
+
+Navigate to the root directory of the project and run the following command to build and start the Spring Boot application:
+
+```bash
+./mvnw clean install spring-boot:run
+```
+
+By default, the API will be served at:
+
+```
+http://localhost:9090/flights
+```
+
+Please,check the .env.example file for environment variable settings and configurations.
