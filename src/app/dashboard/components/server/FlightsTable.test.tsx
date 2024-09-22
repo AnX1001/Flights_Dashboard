@@ -8,7 +8,7 @@ const mockFlights = {
     {
       id: 1,
       flight: 'A123',
-      destination: 'Copenhagen',
+      destination: 'Bergen',
       time: '10:00',
       gate: 'A1',
       status: 'On Time',
@@ -33,7 +33,7 @@ const mockFlights = {
 };
 
 it('should pass accessiblity checks using axe (~30% detection rate)', async () => {
-  const { container } = render(<FlightsTable error={null} flights={mockFlights} />);
+  const { container } = render(<FlightsTable error={null} flights={mockFlights.flightData} />);
 
   expect(await axe(container)).toHaveNoViolations();
 });
