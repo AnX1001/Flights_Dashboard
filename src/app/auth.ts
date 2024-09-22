@@ -12,7 +12,7 @@ export const {
     }),
   ],
   session: {
-    maxAge: 5 * 1, // 5 seconds before session expires
+    maxAge: 60 * 10, // 10 minutes before session expires
   },
   secret: process.env.AUTH_SECRET,
 });

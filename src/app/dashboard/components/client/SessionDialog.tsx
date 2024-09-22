@@ -10,11 +10,14 @@ export function SessionDialog() {
   const [isOpen, setIsOpen] = useState(status === 'unauthenticated');
 
   useEffect(() => {
-    const interval = setTimeout(() => {
-      if (status === 'unauthenticated') {
-        setIsOpen(true);
-      }
-    }, 10000);
+    const interval = setTimeout(
+      () => {
+        if (status === 'unauthenticated') {
+          setIsOpen(true);
+        }
+      },
+      60 * 10 * 1000,
+    ); // Check every 10 minutes
 
     return () => clearInterval(interval);
   }, [status]);
