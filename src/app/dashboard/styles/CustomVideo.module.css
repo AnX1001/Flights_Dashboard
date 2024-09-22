@@ -1,19 +1,16 @@
 .customVideo {
-  background: var(
-    --Black,
-    linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0.9) 100%)
-  );
+  background: var(--Black, linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0.9) 100%));
   border-radius: var(--border-radius-small);
-  margin-top:var(--spacing-size-small);
+  margin-top: var(--spacing-size-small);
   padding: var(--spacing-size-small);
   width: 100%;
   align-items: center;
-  gap:  var(--gap-size-medium);
+  gap: var(--gap-size-medium);
   width: fit-content;
 }
 
 .labelTextArea {
-  font-size:  var(--font-size-medium);
+  font-size: var(--font-size-medium);
 }
 
 .textarea {

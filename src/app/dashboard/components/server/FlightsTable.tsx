@@ -2,9 +2,16 @@ import styles from '../../styles/FlightsTable.module.css';
 import Paper from './Paper';
 
 interface Props {
-  flights: FlightsData;
+  flights: {
+    flight: string;
+    time: string;
+    destination: string;
+    gate: string;
+    status: string;
+  }[];
   error?: string | null;
 }
+
 export function FlightsTable({ flights, error }: Readonly<Props>) {
   if (error) {
     return (
@@ -15,8 +22,6 @@ export function FlightsTable({ flights, error }: Readonly<Props>) {
       </div>
     );
   }
-
-  const { flightData } = flights;
 
   const tableHeadings = ['Time', 'Flight', 'Destination', 'Gate', 'Status'];
   return (
@@ -34,13 +39,13 @@ export function FlightsTable({ flights, error }: Readonly<Props>) {
         </thead>
 
         <tbody>
-          {flightData.map((flightInfo) => (
-            <tr key={flightInfo.flight}>
-              <td>{flightInfo.departureTime}</td>
-              <td>{flightInfo.flight}</td>
-              <td>{flightInfo.gate}</td>
-              <td>{flightInfo.destination}</td>
-              <td>{flightInfo.status}</td>
+          {flights.map((flight) => (
+            <tr key={flight.flight}>
+              <td>{flight.time}</td>
+              <td>{flight.flight}</td>
+              <td>{flight.gate}</td>
+              <td>{flight.destination}</td>
+              <td>{flight.status}</td>
             </tr>
           ))}
         </tbody>
