@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { redirect } from 'next/navigation';
 import styles from '../../styles/Login.module.css';
 
-export default function Login({ session }: { session: any }) {
+export default function Login({ session }: Readonly<{ session: boolean }>) {
   useEffect(() => {
     if (session !== null) {
       redirect('/dashboard');

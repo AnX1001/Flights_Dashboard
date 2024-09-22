@@ -5,7 +5,7 @@ interface Props {
   errorInfo: string;
   contactInfo: string;
 }
-export default function FaultyWidgetCard({ heading, errorInfo, contactInfo }: Props) {
+export default function FaultyWidgetCard({ heading, errorInfo, contactInfo }: Readonly<Props>) {
   return (
     <div className={styles.faultyWidgetCard}>
       <h2>{heading} </h2>

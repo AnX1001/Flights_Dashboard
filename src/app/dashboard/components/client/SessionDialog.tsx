@@ -5,7 +5,7 @@ import { LinkButton } from '../server/LinkButton';
 import styles from '../../styles/SessionDialog.module.css';
 
 export function SessionDialog() {
-  const { data: session, status } = useSession();
+  const { status } = useSession();
 
   const [isOpen, setIsOpen] = useState(status === 'unauthenticated');
 

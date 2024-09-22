@@ -3,9 +3,9 @@ import Paper from './Paper';
 
 interface Props {
   flights: FlightsData;
-  error: string | null;
+  error?: string | null;
 }
-export function FlightsTable({ flights, error }: Props) {
+export function FlightsTable({ flights, error }: Readonly<Props>) {
   if (error) {
     return (
       <div className={styles.errorMessage}>
