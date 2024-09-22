@@ -1,15 +1,3 @@
-export interface Flight {
-  flight: string;
-  destination: string;
-  gate: string;
-  status: string;
-  departureTime: string;
-}
-
-export interface FlightsData {
-  flightData: Flight[];
-}
-
 export interface InstantDetails {
   air_pressure_at_sea_level: number;
   air_temperature: number;
@@ -67,15 +55,4 @@ export interface WeatherData {
     properties: WeatherProperties;
     type: string;
   };
-}
-
-export interface Flight {
-  id: string;
-  flightNumber: string;
-  destination: string;
-  departureTime: string;
-}
-
-export interface FlightsData {
-  flightData: Flight[];
 }

@@ -27,7 +27,7 @@ export default async function DashboardPage() {
 
   const weatherApiUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/api/weather`;
 
-  const flightsApiUrl = `${process.env.FLIGHTS_API_URL}`;
+  const flightsApiUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/api/flights`;
 
   if (!weatherApiUrl || !flightsApiUrl) {
     throw new Error('API URLs must be defined in environment variables.');
