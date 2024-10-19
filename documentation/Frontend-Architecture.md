@@ -1,27 +1,5 @@
 # Frontend Architeture 🏗️
 
-## Folder Structure
-
-The folder structure of this project is organized to clearly separate UI components based on whether they are intended for server-side or client-side rendering.
-
-```
-src/
-├── app/
-│   ├── api/
-│   │   ├── flights/
-│   │   ├── messages/
-│   │   └── weather/
-│   ├── dashboard/
-│   │   ├── components/
-│   │   │   ├── client/
-│   │   │   ├── server/
-│   │   ├── styles/
-│   │   ├── layout.tsx
-│   │   └── page.tsx
-├── layout.tsx
-└── page.tsx
-```
-
 ## Key Components and Their Roles
 
 1. **Root Layout (`app/layout.tsx`)**
