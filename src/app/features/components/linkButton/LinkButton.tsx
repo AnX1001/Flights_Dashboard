@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import styles from '../../styles/LinkButton.module.css';
+import styles from './LinkButton.module.css';
 
 interface Props {
   label: string;

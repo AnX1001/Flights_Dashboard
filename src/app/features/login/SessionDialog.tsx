@@ -1,8 +1,9 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useSession } from 'next-auth/react';
-import { LinkButton } from '../server/LinkButton';
-import styles from '../../styles/SessionDialog.module.css';
+
+import styles from './SessionDialog.module.css';
+import { LinkButton } from '../components/linkButton/LinkButton';
 
 export function SessionDialog() {
   const { status } = useSession();

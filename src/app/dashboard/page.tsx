@@ -1,13 +1,13 @@
-import { FlightsTable } from './components/server/FlightsTable';
-import WeatherWidget from './components/server/WeatherWidget';
-import { SessionDialog } from './components/client/SessionDialog';
-import VideoCard from './components/server/VideoCard';
-import SystemMessages from './components/server/SystemMessages';
-import UserInfo from './components/client/UserInfo';
+import { FlightsTable } from '../features/flightstable/FlightsTable';
+import WeatherWidget from '../features/weather/WeatherWidget';
+import { SessionDialog } from '../features/login/SessionDialog';
 import styles from './page.module.css';
 import { auth } from '../auth';
-import { LinkButton } from './components/server/LinkButton';
-import InternalLogs from './components/server/InternalLogs';
+import { LinkButton } from '../features/components/linkButton/LinkButton';
+import InternalLogs from '../features/internalLogs/InternalLogs';
+import SystemMessages from '../features/systemMessages/SystemMessages';
+import UserInfo from '../features/userInfo/UserInfo';
+import VideoCard from '../features/video/VideoCard';
 
 export default async function DashboardPage() {
   async function fetchData(url: string) {

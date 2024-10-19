@@ -1,7 +1,9 @@
-import FaultyWidgetCard from './FaultyWidgetCard.tsx';
-import WidgetCard from './WidgetCard.tsx';
-import weatherLabels from '../weatherLabels.json';
-import { WeatherData } from '../types.ts';
+import FaultyWidgetCard from '../faultyWidget/FaultyWidgetCard';
+import { WeatherData } from '../components/types';
+
+import weatherLabels from './weatherLabels.json';
+import WidgetCard from '../components/widgetCard/WidgetCard';
+
 interface Props {
   weather: WeatherData;
   error: string | null;

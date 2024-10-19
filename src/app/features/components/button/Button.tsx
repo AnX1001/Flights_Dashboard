@@ -1,4 +1,4 @@
-import styles from '../../styles/button.module.css';
+import styles from './button.module.css';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   error: boolean;

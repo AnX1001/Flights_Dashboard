@@ -1,5 +1,5 @@
-import styles from '../../styles/FlightsTable.module.css';
-import Paper from './Paper';
+import Paper from '../components/paper/Paper';
+import styles from './FlightsTable.module.css';
 
 interface Props {
   flights: {

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '../../styles/WidgetCard.module.css';
+import styles from './WidgetCard.module.css';
 
 interface Props {
   logoSrc?: string;

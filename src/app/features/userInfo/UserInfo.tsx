@@ -1,7 +1,8 @@
 'use client';
-import { ReactProfiler } from '../../../utils/ReactProfiler';
-import WidgetCard from '../server/WidgetCard.tsx';
+
+import { ReactProfiler } from '@/app/utils/ReactProfiler';
 import { useEffect, useState } from 'react';
+import WidgetCard from '../components/widgetCard/WidgetCard';
 
 export default function UserInfo({
   userName,

@@ -1,5 +1,5 @@
-import styles from '../../styles/WidgetCard.module.css';
-import CustomVideo from '../client/CustomVideo';
+import CustomVideo from './CustomVideo';
+import styles from '../components/widgetCard/WidgetCard.module.css';
 
 export default function VideoCard() {
   return (

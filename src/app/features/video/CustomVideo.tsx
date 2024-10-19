@@ -1,9 +1,9 @@
 'use client';
 
-import { Button } from '../server/Button';
-import styles from '../../styles/CustomVideo.module.css';
+import styles from './CustomVideo.module.css';
 import { useState } from 'react';
 import DOMPurify from 'dompurify';
+import { Button } from '../components/button/Button';
 
 export default function CustomVideo() {
   const [textareaInput, setTextareaInput] = useState('');

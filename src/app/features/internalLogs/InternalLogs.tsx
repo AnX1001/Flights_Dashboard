@@ -1,4 +1,4 @@
-import styles from '../../styles/InternalLogs.module.css';
+import styles from './InternalLogs.module.css';
 
 export default function InternalLogs() {
   return (

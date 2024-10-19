@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '../../styles/Paper.module.css';
+import styles from './Paper.module.css';
 
 interface Props {
   title: string;

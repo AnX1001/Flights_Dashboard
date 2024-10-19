@@ -1,4 +1,4 @@
-import WidgetCard from './WidgetCard.tsx';
+import WidgetCard from '../components/widgetCard/WidgetCard';
 
 export default function WeatherWidget() {
   const isDockerized = process.env.RUNNING_IN_DOCKER ? 'running inside Docker' : 'running locally';
