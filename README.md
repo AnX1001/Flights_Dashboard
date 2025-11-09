@@ -29,7 +29,13 @@
    npm run dev
    ```
 
-Now you can open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Backend Requirement
+
+The dashboard requires the backend flights API to be running and accessible at the URL specified in your `.env.local` (e.g., `http://localhost:9090/flights`).
+
+Make sure to start the backend server before using the dashboard to see live data.
+
+For detailed backend/API setup instructions, see [documentation/API-Endpoints.md](documentation/API-Endpoints.md).
 
 ## Documentation
 
